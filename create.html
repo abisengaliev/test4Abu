@@ -1,0 +1,68 @@
+<!-- create.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создать Урок</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container-header">
+            <h1>Мой Образовательный Портал</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Главная</a></li>
+                    <li><a href="lesson.html">Уроки</a></li>
+                    <li><a href="create.html">Создать Урок</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container"> 
+        <div class="title">Создать Новый Урок</div> 
+        <form id="createCourseForm" class="create-form">
+            <div class="form-group">
+                <label for="courseTitle">Название курса:</label>
+                <input type="text" id="courseTitle" name="title" required>
+            </div>
+
+            <div class="form-group">
+                <label for="courseDescription">Описание курса:</label>
+                <textarea id="courseDescription" name="description" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="courseTemplate">Выберите шаблон курса:</label>
+                <select id="courseTemplate" name="template_id" required>
+                    <option value="" disabled selected>-- Выберите шаблон --</option>
+                    <option value="1">Шаблон 1</option>
+                    <option value="2">Шаблон 2</option>
+                    <option value="3">Шаблон 3</option>
+                    <option value="4">Шаблон 4</option>
+                    <option value="5">Шаблон 5</option>
+                </select>
+            </div>
+
+            <hr>
+
+            <h2>Страницы Урока</h2>
+            <div id="pagesContainer">
+                <!-- Здесь будут динамически добавляться страницы -->
+            </div>
+            <button type="button" id="addPageButton" class="button">Добавить Страницу</button>
+
+            <hr>
+
+            <button type="submit" class="button">Создать Урок</button>
+        </form> 
+    </div> 
+
+    <!-- Scripts -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
